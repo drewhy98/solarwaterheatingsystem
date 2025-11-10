@@ -6,7 +6,7 @@ import mysql.connector
 db_host = os.getenv("MYSQL_HOST", "db")
 db_user = os.getenv("MYSQL_USER", "user")
 db_password = os.getenv("MYSQL_PASSWORD", "password")
-db_name = os.getenv("MYSQL_DATABASE", "swhs_db")
+db_name = os.getenv("MYSQL_DATABASE", "solarwaterheatingsystem_db")
 
 conn = mysql.connector.connect(
     host=db_host,
