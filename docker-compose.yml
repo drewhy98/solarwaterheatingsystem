@@ -3,7 +3,7 @@ version: "3.8"
 services:
   swhs:
     build: .
-    container_name: swhs_app
+    container_name: solarwaterheatingsystem_app
     tty: true
     stdin_open: true
     environment:
@@ -11,17 +11,17 @@ services:
       MYSQL_PORT: 3306
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-      MYSQL_DATABASE: swhs_db
+      MYSQL_DATABASE: solarwaterheatingsystem_db
     depends_on:
       - db
 
   db:
     image: mysql:8.0
-    container_name: swhs_db
+    container_name: solarwaterheatingsystem_db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: swhs_db
+      MYSQL_DATABASE: solarwaterheatingsystem_db
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     ports:
